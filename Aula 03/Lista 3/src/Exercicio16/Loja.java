@@ -1,15 +1,24 @@
 package Exercicio16;
 
 public class Loja {
-    public String nome;
-    public String endereco;
-    public String telefone;
+    private String nome;
+    private String endereco;
+    private String telefone;
     private Boolean aberta = false;
 
     public Loja(String nome, String endereco, String telefone){
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
+    }
+    public String getNome(){
+        return nome;
+    }
+    public String getEndereco(){
+        return endereco;
+    }
+    public String getTelefone(){
+        return telefone;
     }
     public void abrir(){
         if (aberta == true){

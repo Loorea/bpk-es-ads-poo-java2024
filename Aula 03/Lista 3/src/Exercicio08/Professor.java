@@ -1,8 +1,8 @@
 package Exercicio08;
 
 public class Professor {
-    public String nome;
-    public String disciplina;
+    private String nome;
+    private String disciplina;
     private Integer salario;
 
     public Professor(String nome, String disciplina, Integer salario){
@@ -10,10 +10,16 @@ public class Professor {
         this.disciplina = disciplina;
         this.salario = salario;
     }
+    public String getNome(){
+        return nome;
+    }
+    public String getDisciplina(){
+        return disciplina;
+    }
     public void darAula(){
-        System.out.println("O professor "+nome+" está dando aula de "+disciplina+" agora.");
+        System.out.println("O professor " + nome + " está dando aula de " + disciplina + " agora.");
     }
     public void corrigirProvas(){
-        System.out.println("O professor "+nome+" está corrigindo as provas de sua disciplina de "+disciplina);
+        System.out.println("O professor " + nome + " está corrigindo as provas de sua disciplina de " + disciplina);
     }
 }

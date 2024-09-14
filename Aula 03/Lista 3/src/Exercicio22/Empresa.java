@@ -1,14 +1,23 @@
 package Exercicio22;
 
 public class Empresa {
-    public String CNPJ;
-    public String nome;
-    public Integer numFuncionarios;
+    private String CNPJ;
+    private String nome;
+    private Integer numFuncionarios;
 
     public Empresa(String CNPJ, String nome, Integer numFuncionarios){
         this.CNPJ = CNPJ;
         this.nome = nome;
         this.numFuncionarios = numFuncionarios;
+    }
+    public String getCNPJ(){
+        return CNPJ;
+    }
+    public String getNome(){
+        return nome;
+    }
+    public Integer getNumFuncionarios(){
+        return numFuncionarios;
     }
     public void contratar(){
         System.out.println("Parabéns! Você contratou um funcionário.");

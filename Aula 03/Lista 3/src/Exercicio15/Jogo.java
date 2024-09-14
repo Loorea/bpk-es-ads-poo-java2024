@@ -1,9 +1,9 @@
 package Exercicio15;
 
 public class Jogo {
-    public String nome;
-    public String genero;
-    public Double preco;
+    private String nome;
+    private String genero;
+    private Double preco;
     private Boolean playGame = false;
 
     public Jogo(String nome, String genero, Double preco){
@@ -11,6 +11,15 @@ public class Jogo {
         this.genero = genero;
         this.preco = preco;
         playGame = false;
+    }
+    public String getNome(){
+        return nome;
+    }
+    public String getGenero(){
+        return genero;
+    }
+    public Double getPreco(){
+        return preco;
     }
     public void iniciar(){
         playGame = true;

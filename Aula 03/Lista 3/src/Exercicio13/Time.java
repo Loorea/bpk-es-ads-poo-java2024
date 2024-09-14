@@ -1,14 +1,23 @@
 package Exercicio13;
 
 public class Time {
-    public String nome;
-    public String tecnico;
+    private String nome;
+    private String tecnico;
     private Integer numJogad;
 
     public Time(String nome, String tecnico){
         this.nome = nome;
         this.tecnico = tecnico;
         this.numJogad = 12;
+    }
+    public String getNome(){
+        return nome;
+    }
+    public String getTecnico(){
+        return tecnico;
+    }
+    public Integer getNumJogad(){
+        return numJogad;
     }
     public void removerJog(){
         if(numJogad>0){

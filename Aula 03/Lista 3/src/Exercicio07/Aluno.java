@@ -4,22 +4,31 @@ import java.util.Scanner;
 
 public class Aluno {
     Scanner scanner = new Scanner(System.in);
-    public String nome;
+    private String nome;
     private Integer matricula;
-    public String curso;
+    private String curso;
 
     public Aluno(String nome, Integer matricula, String curso){
         this.nome = nome;
         this.matricula = matricula;
         this.curso = curso;
     }
+    public String getNome(){
+        return nome;
+    }
+    public Integer getMatricula(){
+        return matricula;
+    }
+    public String getCurso(){
+        return curso;
+    }
     public void calculador(){
         System.out.println("Insira a primeira nota: ");
-        Integer nota1 = scanner.nextInt();
+        Double nota1 = scanner.nextDouble();
         System.out.println("Insira a segunda nota: ");
-        Integer nota2 = scanner.nextInt();
-        Integer media = (nota1+nota2)/2;
-        System.out.println(nome+", sua média é de "+ media +" pontos.");
+        Double nota2 = scanner.nextDouble();
+        Double media = (nota1 + nota2) / 2;
+        System.out.println(nome+", sua média é de " + media + " pontos.");
         scanner.close();
     }
 }

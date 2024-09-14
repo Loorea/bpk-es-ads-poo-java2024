@@ -1,18 +1,32 @@
 package Exercicio02;
 
 public class Celular {
-    public String marca;
-    public String modelo;
-    public Integer bateria = 100;
+    private String marca;
+    private String modelo;
+    private Integer bateria = 100;
 
     public Celular(String marca, String modelo, Integer bateria){
         this.marca = marca;
         this.modelo = modelo;
         this.bateria = bateria;
     }
+    public String getMarca(){
+        return marca;
+    }
+    public String getModelo(){
+        return modelo;
+    }
+    public Integer getBateria(){
+        return bateria;
+    }
     public void usar(){
-        System.out.println("bateria em "+bateria);
-        bateria = bateria - 5;
+        if (bateria > 0) {
+            System.out.println("bateria em " + bateria);
+            bateria = bateria - 5;
+        }
+        if(bateria==0){
+            System.out.println(marca + " " + modelo + " está sem bateria.");
+        }
     }
 }
 

@@ -1,15 +1,21 @@
 package Exercicio18;
 
 public class LivroDigital {
-    public String titulo;
-    public String autor;
+    private String titulo;
+    private String autor;
     private byte tamanhoDoArquivo;
     private Boolean aberto = false;
 
     public LivroDigital(String titulo, String autor){
         this.titulo = titulo;
         this.autor = autor;
-        tamanhoDoArquivo = 4;
+        this.tamanhoDoArquivo = 4;
+    }
+    public String getTitulo(){
+        return titulo;
+    }
+    public String getAutor(){
+        return autor;
     }
     public void abrir(){
         if (aberto == true){
